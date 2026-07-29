@@ -106,21 +106,25 @@ export default function Home() {
       </section>
 
       <section className="memory" id="memory">
-        <div className="memoryMark">∞</div>
-        <p className="eyebrow">Für immer Teil unseres Sounds</p>
-        <h2>In Erinnerung an<br /><em>SoundOfSilence</em></h2>
-        <figure className="memoryPhoto">
-          <img
-            src="/soundofsilence-memory.png"
-            alt="Erinnerungsbild für SoundOfSilence bei Sonnenuntergang"
-          />
-        </figure>
-        <div className="line" />
-        <blockquote>
-          Manche Stimmen verstummen – doch ihre Melodie bleibt in unseren
-          Herzen und in jeder Nacht, die wir gemeinsam feiern.
-        </blockquote>
-        <p className="forever">Unvergessen. Unendlich. Immer dabei.</p>
+        <div className="memoryInner">
+          <figure className="memoryPhoto">
+            <img
+              src="/soundofsilence-memory.png"
+              alt="Erinnerungsbild für SoundOfSilence bei Sonnenuntergang"
+            />
+          </figure>
+          <div className="memoryCopy">
+            <div className="memoryMark">∞</div>
+            <p className="eyebrow">Für immer Teil unseres Sounds</p>
+            <h2>In Erinnerung an<br /><em>SoundOfSilence</em></h2>
+            <div className="line" />
+            <blockquote>
+              Manche Stimmen verstummen – doch ihre Melodie bleibt in unseren
+              Herzen und in jeder Nacht, die wir gemeinsam feiern.
+            </blockquote>
+            <p className="forever">Unvergessen. Unendlich. Immer dabei.</p>
+          </div>
+        </div>
       </section>
 
       <footer>
