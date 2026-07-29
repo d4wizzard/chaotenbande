@@ -1,6 +1,6 @@
 const members = [
-  { name: "Mr_BlackAngel", role: "Herz & Haltung" },
-  { name: "Mrs_BlackAngel", role: "Glanz & Gefühl" },
+  { name: "Mr_BlackAngel", role: "Herz & Haltung", image: "/mr-blackangel.png" },
+  { name: "Mrs_BlackAngel", role: "Glanz & Gefühl", image: "/mrs-blackangel.png" },
   { name: "BloodyRose", role: "Feuer & Leidenschaft" },
   { name: "IamXox", role: "Energie & Euphorie" },
 ];
@@ -87,7 +87,11 @@ export default function Home() {
         <div className="memberGrid">
           {members.map((member, index) => (
             <article className="member" key={member.name}>
-              <div className="avatar">{String(index + 1).padStart(2, "0")}</div>
+              {member.image ? (
+                <img className="memberPhoto" src={member.image} alt={`Porträt von ${member.name}`} />
+              ) : (
+                <div className="avatar">{String(index + 1).padStart(2, "0")}</div>
+              )}
               <h3>{member.name}</h3>
               <p>{member.role}</p>
             </article>
@@ -105,6 +109,12 @@ export default function Home() {
         <div className="memoryMark">∞</div>
         <p className="eyebrow">Für immer Teil unseres Sounds</p>
         <h2>In Erinnerung an<br /><em>SoundOfSilence</em></h2>
+        <figure className="memoryPhoto">
+          <img
+            src="/soundofsilence-memory.png"
+            alt="Erinnerungsbild für SoundOfSilence bei Sonnenuntergang"
+          />
+        </figure>
         <div className="line" />
         <blockquote>
           Manche Stimmen verstummen – doch ihre Melodie bleibt in unseren

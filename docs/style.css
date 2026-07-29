@@ -168,6 +168,16 @@ h1 em, h2 em { color: var(--pink-soft); font-weight: 400; }
 .memberGrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 70px 0 45px; }
 .member { padding: 38px 18px; text-align: center; background: #0b070c; border: 1px solid #271523; transition: .3s ease; }
 .member:hover { transform: translateY(-7px); border-color: rgba(255,45,171,.55); box-shadow: 0 18px 45px rgba(255,45,171,.08); }
+.memberPhoto {
+  display: block;
+  width: min(100%, 230px);
+  aspect-ratio: 1;
+  object-fit: cover;
+  margin: 0 auto 24px;
+  border-radius: 50%;
+  border: 1px solid rgba(232,162,51,.6);
+  box-shadow: 0 0 28px rgba(232,162,51,.14);
+}
 .avatar {
   width: 72px; height: 72px; margin: auto auto 24px; border: 1px solid #63304f; border-radius: 50%;
   display: grid; place-items: center; color: var(--pink-soft); font-family: Georgia, serif;
@@ -193,6 +203,22 @@ h1 em, h2 em { color: var(--pink-soft); font-weight: 400; }
 .memoryMark { font: 3.5rem Georgia, serif; color: #a99bc9; text-shadow: 0 0 30px #7763bb; }
 .memory h2 { font-size: clamp(3.5rem, 7vw, 7rem); }
 .memory h2 em { color: #c7bce4; }
+.memoryPhoto {
+  width: min(760px, 92vw);
+  margin: 32px 0 24px;
+  padding: 6px;
+  border: 1px solid rgba(199,188,228,.28);
+  background: rgba(255,255,255,.025);
+  box-shadow: 0 22px 65px rgba(0,0,0,.35);
+}
+.memoryPhoto img {
+  display: block;
+  width: 100%;
+  max-height: 430px;
+  object-fit: cover;
+  object-position: center;
+  filter: saturate(.82) contrast(1.04);
+}
 .line { width: 70px; height: 1px; background: #746591; margin: 22px 0; }
 blockquote { max-width: 720px; color: #c4bdcd; font: italic 1.25rem/1.8 Georgia, serif; margin: 20px 0; }
 .forever { color: #837990; text-transform: uppercase; font-size: .68rem; letter-spacing: .25em; margin-top: 25px; }
