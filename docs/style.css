@@ -136,10 +136,10 @@ h1 em, h2 em { color: var(--pink-soft); font-weight: 400; }
 .locations { display: grid; grid-template-columns: .8fr 1.2fr; gap: 5vw; }
 .locationGrid { display: grid; gap: 14px; }
 .locationCard {
-  min-height: 160px;
+  min-height: 125px;
   position: relative;
   overflow: hidden;
-  padding: 28px;
+  padding: 22px 28px;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;

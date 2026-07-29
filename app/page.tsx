@@ -6,7 +6,7 @@ const members = [
 ];
 
 const locations = [
-  ["Clubs", "Neon. Bass. Ekstase."],
+  ["DanceParty", "Neon. Bass. Ekstase."],
   ["Black_Level", "Dunkel. Elektrisch. Grenzenlos."],
   ["Black Taverne", "Mystisch. Wild. Unvergesslich."],
 ];
