@@ -190,8 +190,8 @@ h1 em, h2 em { color: var(--pink-soft); font-weight: 400; }
 .tribeCopy { color: var(--muted); line-height: 1.9; text-align: center; max-width: 760px; margin: auto; }
 
 .memory {
-  min-height: 720px;
-  padding: 120px 24px;
+  min-height: 0;
+  padding: 62px 24px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -202,13 +202,13 @@ h1 em, h2 em { color: var(--pink-soft); font-weight: 400; }
     radial-gradient(circle at 50% 50%, rgba(56,51,94,.3), transparent 38%),
     linear-gradient(180deg, #050307, #090813, #050307);
 }
-.memoryMark { font: 3.5rem Georgia, serif; color: #a99bc9; text-shadow: 0 0 30px #7763bb; }
-.memory h2 { font-size: clamp(3.5rem, 7vw, 7rem); }
+.memoryMark { font: 2.4rem Georgia, serif; color: #a99bc9; text-shadow: 0 0 30px #7763bb; }
+.memory h2 { font-size: clamp(2.7rem, 5vw, 5rem); }
 .memory h2 em { color: #c7bce4; }
 .memoryPhoto {
-  width: min(760px, 92vw);
-  margin: 32px 0 24px;
-  padding: 6px;
+  width: min(560px, 88vw);
+  margin: 18px 0 10px;
+  padding: 4px;
   border: 1px solid rgba(199,188,228,.28);
   background: rgba(255,255,255,.025);
   box-shadow: 0 22px 65px rgba(0,0,0,.35);
@@ -216,14 +216,14 @@ h1 em, h2 em { color: var(--pink-soft); font-weight: 400; }
 .memoryPhoto img {
   display: block;
   width: 100%;
-  max-height: 430px;
+  max-height: 270px;
   object-fit: cover;
   object-position: center;
   filter: saturate(.82) contrast(1.04);
 }
-.line { width: 70px; height: 1px; background: #746591; margin: 22px 0; }
-blockquote { max-width: 720px; color: #c4bdcd; font: italic 1.25rem/1.8 Georgia, serif; margin: 20px 0; }
-.forever { color: #837990; text-transform: uppercase; font-size: .68rem; letter-spacing: .25em; margin-top: 25px; }
+.line { width: 58px; height: 1px; background: #746591; margin: 12px 0; }
+blockquote { max-width: 680px; color: #c4bdcd; font: italic 1.05rem/1.6 Georgia, serif; margin: 10px 0; }
+.forever { color: #837990; text-transform: uppercase; font-size: .64rem; letter-spacing: .25em; margin-top: 14px; }
 
 footer { text-align: center; padding: 75px 20px; color: #948894; }
 footer .brand { color: #fff; }
