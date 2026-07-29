@@ -6,7 +6,7 @@ const members = [
 ];
 
 const locations = [
-  ["DanceParty", "Neon. Bass. Ekstase."],
+  ["GER Dancearty", "Neon. Bass. Ekstase."],
   ["Black_Level", "Dunkel. Elektrisch. Grenzenlos."],
   ["Black Taverne", "Mystisch. Wild. Unvergesslich."],
 ];
@@ -61,7 +61,10 @@ export default function Home() {
             <article className={`locationCard card${index + 1}`} key={name}>
               <span>0{index + 1}</span>
               <div>
-                <h3>{name}</h3>
+                <div className="locationTitle">
+                  <span className="cbTag">CB</span>
+                  <h3>{name}</h3>
+                </div>
                 <p>{copy}</p>
               </div>
             </article>
