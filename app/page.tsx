@@ -26,7 +26,7 @@ export default function Home() {
       <header className="hero" id="top">
         <div className="glow glowOne" />
         <div className="glow glowTwo" />
-        <p className="eyebrow">Wir feiern. Wir leben. Wir sind Chaotenbande.</p>
+        <p className="eyebrow">Wir feiern. Wir leben. Wir sind die Chaoten Bande.</p>
         <h1>Nächte, die<br /><em>Geschichte schreiben.</em></h1>
         <p className="lead">
           Die Chaoten Bande bringt Menschen, Musik und magische Locations
@@ -112,7 +112,7 @@ export default function Home() {
 
       <footer>
         <p className="brand">CHAOTEN<span>BANDE</span></p>
-        <p>Wir feiern. Wir leben. Wir sind Chaotenbande.</p>
+        <p>Wir feiern. Wir leben. Wir sind die Chaoten Bande.</p>
         <p className="small">Mit Herz, Bass und Erinnerung.</p>
       </footer>
     </main>
