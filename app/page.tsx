@@ -1,12 +1,12 @@
 const members = [
   { name: "Mr_BlackAngel", role: "Herz & Haltung", image: "/mr-blackangel.png" },
   { name: "Mrs_BlackAngel", role: "Glanz & Gefühl", image: "/mrs-blackangel.png" },
-  { name: "BloodyRose", role: "Feuer & Leidenschaft" },
-  { name: "IamXox", role: "Energie & Euphorie" },
+  { name: "BloodyRose", role: "Feuer & Leidenschaft", image: "/bloodyrose.jpg", position: "center 25%" },
+  { name: "IamXox", role: "Energie & Euphorie", image: "/iamxox.png", position: "center 18%" },
 ];
 
 const locations = [
-  ["GER Dancearty", "Neon. Bass. Ekstase."],
+  ["GER Danceparty", "Neon. Bass. Ekstase."],
   ["Black_Level", "Dunkel. Elektrisch. Grenzenlos."],
   ["Black Taverne", "Mystisch. Wild. Unvergesslich."],
 ];
@@ -88,7 +88,12 @@ export default function Home() {
           {members.map((member, index) => (
             <article className="member" key={member.name}>
               {member.image ? (
-                <img className="memberPhoto" src={member.image} alt={`Porträt von ${member.name}`} />
+                <img
+                  className="memberPhoto"
+                  src={member.image}
+                  alt={`Porträt von ${member.name}`}
+                  style={{ objectPosition: member.position ?? "center" }}
+                />
               ) : (
                 <div className="avatar">{String(index + 1).padStart(2, "0")}</div>
               )}
