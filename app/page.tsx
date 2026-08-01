@@ -3,6 +3,7 @@ const members = [
   { name: "Mrs_BlackAngel", role: "Glanz & Gefühl", image: "/mrs-blackangel.png" },
   { name: "BloodyRose", role: "Feuer & Leidenschaft", image: "/bloodyrose.jpg", position: "center 25%" },
   { name: "IamXox", role: "Energie & Euphorie", image: "/iamxox.png", position: "center 18%" },
+  { name: "KimLee_Darkside", role: "Charme & Magie", image: "/kimlee-darkside.png", position: "center 22%" },
 ];
 
 const locations = [
@@ -103,7 +104,7 @@ export default function Home() {
           ))}
         </div>
         <p className="tribeCopy">
-          Vier Namen, ein Herzschlag. Gemeinsam schaffen sie Räume voller
+          Fünf Namen, ein Herzschlag. Gemeinsam schaffen sie Räume voller
           Freiheit, Respekt, Musik und echter Verbundenheit. Wer einmal mit der
           Chaoten Bande gefeiert hat, bleibt nicht einfach Gast – sondern wird
           Teil der Geschichte.
