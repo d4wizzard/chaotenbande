@@ -3,7 +3,7 @@ const members = [
   { name: "Mrs_BlackAngel", role: "Glanz & Gefühl", image: "/mrs-blackangel.png" },
   { name: "BloodyRose", role: "Feuer & Leidenschaft", image: "/bloodyrose.jpg", position: "center 25%" },
   { name: "IamXox", role: "Energie & Euphorie", image: "/iamxox.png", position: "center 18%" },
-  { name: "KimLee_Darkside", role: "Charme & Magie", image: "/kimlee-darkside.png", position: "center 22%" },
+  { name: "KimLee_Darkside", role: "Charme & Magie", image: "/kimlee-darkside.png?v=20260801", position: "center 22%" },
 ];
 
 const locations = [
