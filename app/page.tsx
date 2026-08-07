@@ -4,12 +4,14 @@ const members = [
   { name: "BloodyRose", role: "Feuer & Leidenschaft", image: "/bloodyrose.jpg", position: "center 25%" },
   { name: "IamXox", role: "Energie & Euphorie", image: "/iamxox.png", position: "center 18%" },
   { name: "KimLee_Darkside", role: "Charme & Magie", image: "/kimlee-darkside.png?v=20260801", position: "center 22%" },
+  { name: "🐾⇺≾⊋VØⱠ₭ɆⱤ⊊≿⇻🐾", role: "Stärke & Loyalität", image: "/volker.png", position: "center 18%" },
 ];
 
 const locations = [
   ["GER Danceparty", "Neon. Bass. Ekstase."],
   ["Black_Level", "Dunkel. Elektrisch. Grenzenlos."],
-  ["Black Taverne", "Mystisch. Wild. Unvergesslich."],
+  ["Blue Lagoon", "Tropisch. Leuchtend. Frei."],
+  ["Blacks Tavern", "Mystisch. Wild. Unvergesslich."],
 ];
 
 export default function Home() {
@@ -20,6 +22,7 @@ export default function Home() {
         <div className="navlinks">
           <a href="#locations">Locations</a>
           <a href="#stamm">Der Stamm</a>
+          <a href="#discord">Discord</a>
           <a href="#memory">Erinnerung</a>
         </div>
       </nav>
@@ -39,15 +42,15 @@ export default function Home() {
 
       <section className="poster" aria-label="Chaotenbande Banner">
         <img
-          src="/chaotenbande.png"
-          alt="Chaotenbande – Clubs, Black Level und Black Taverne"
+          src="/chaotenbande.png?v=20260807"
+          alt="Chaotenbande – Dance Party, Black Level, Blue Lagoon und Blacks Tavern"
         />
       </section>
 
       <section className="statement">
         <p>Eine Bande</p>
         <span>♥</span>
-        <p>Drei legendäre Orte</p>
+        <p>Vier legendäre Orte</p>
         <span>♥</span>
         <p>Unendliche Nächte</p>
       </section>
@@ -55,7 +58,7 @@ export default function Home() {
       <section className="section locations" id="locations">
         <div className="sectionHeading">
           <p className="eyebrow">Wo Chaos zu Magie wird</p>
-          <h2>Drei Welten.<br />Ein Gefühl.</h2>
+          <h2>Vier Welten.<br />Ein Gefühl.</h2>
         </div>
         <div className="locationGrid">
           {locations.map(([name, copy], index) => (
@@ -72,8 +75,8 @@ export default function Home() {
           ))}
         </div>
         <p className="bodyCopy">
-          Ob pulsierender Dancefloor, futuristische Black-Level-Nacht oder
-          düster-gemütliche Taverne: Die Chaoten Bande ist Gastgeber für Partys,
+          Ob pulsierender Dancefloor, futuristische Black-Level-Nacht, tropische
+          Blue Lagoon oder düster-gemütliche Taverne: Die Chaoten Bande ist Gastgeber für Partys,
           bei denen Beats verbinden, Freundschaften entstehen und der Alltag
           draußen bleibt. Unsere DJs & DJanes liefern den Soundtrack – ihr macht
           die Nacht legendär.
@@ -104,11 +107,23 @@ export default function Home() {
           ))}
         </div>
         <p className="tribeCopy">
-          Fünf Namen, ein Herzschlag. Gemeinsam schaffen sie Räume voller
+          Sechs Namen, ein Herzschlag. Gemeinsam schaffen sie Räume voller
           Freiheit, Respekt, Musik und echter Verbundenheit. Wer einmal mit der
           Chaoten Bande gefeiert hat, bleibt nicht einfach Gast – sondern wird
           Teil der Geschichte.
         </p>
+      </section>
+
+      <section className="discordSection" id="discord">
+        <p className="eyebrow">Bleib mit der Bande verbunden</p>
+        <h2>Komm auf unseren<br /><em>Discord-Server</em></h2>
+        <p className="discordCopy">
+          Triff die Chaoten Bande, erfahre von kommenden Partys und Locations
+          und werde Teil unserer Community.
+        </p>
+        <a className="discordButton" href="https://discord.gg/CpmmsBNF3g" target="_blank" rel="noreferrer">
+          Discord-Server beitreten <span>↗</span>
+        </a>
       </section>
 
       <section className="memory" id="memory">
