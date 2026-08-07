@@ -1,3 +1,7 @@
+"use client";
+
+import { useState } from "react";
+
 const members = [
   { name: "Mr_BlackAngel", role: "Herz & Haltung", image: "/mr-blackangel.png" },
   { name: "Mrs_BlackAngel", role: "Glanz & Gefühl", image: "/mrs-blackangel.png" },
@@ -8,21 +12,23 @@ const members = [
 ];
 
 const locations = [
-  ["GER Danceparty", "Neon. Bass. Ekstase."],
-  ["Black_Level", "Dunkel. Elektrisch. Grenzenlos."],
-  ["Blue Lagoon", "Tropisch. Leuchtend. Frei."],
-  ["Blacks Tavern", "Mystisch. Wild. Unvergesslich."],
+  { name: "GER Danceparty", copy: "Neon. Bass. Ekstase.", image: "/ger-danceparty-club.jpg" },
+  { name: "Black_Level", copy: "Dunkel. Elektrisch. Grenzenlos." },
+  { name: "Blue Lagoon", copy: "Tropisch. Leuchtend. Frei.", image: "/blue-lagoon-dance-club.jpg" },
+  { name: "Blacks Tavern", copy: "Mystisch. Wild. Unvergesslich.", image: "/blacks-tavern.jpg" },
 ];
 
 export default function Home() {
+  const [selectedLocation, setSelectedLocation] = useState<(typeof locations)[number] | null>(null);
+
   return (
     <main>
       <nav className="nav" aria-label="Hauptnavigation">
         <a className="brand" href="#top">CHAOTEN<span>BANDE</span></a>
         <div className="navlinks">
           <a href="#locations">Locations</a>
-          <a href="#stamm">Der Stamm</a>
           <a href="#discord">Discord</a>
+          <a href="#stamm">Der Stamm</a>
           <a href="#memory">Erinnerung</a>
         </div>
       </nav>
@@ -61,19 +67,35 @@ export default function Home() {
           <h2>Vier Welten.<br />Ein Gefühl.</h2>
         </div>
         <div className="locationGrid">
-          {locations.map(([name, copy], index) => (
-            <article className={`locationCard card${index + 1}`} key={name}>
+          {locations.map((location, index) => (
+            <button
+              className={`locationCard card${index + 1}`}
+              key={location.name}
+              type="button"
+              disabled={!location.image}
+              onClick={() => location.image && setSelectedLocation(location)}
+              aria-label={location.image ? `${location.name} groß anzeigen` : `${location.name} – noch kein Bild vorhanden`}
+            >
               <span>0{index + 1}</span>
               <div>
                 <div className="locationTitle">
                   <span className="cbTag">CB</span>
-                  <h3>{name}</h3>
+                  <h3>{location.name}</h3>
                 </div>
-                <p>{copy}</p>
+                <p>{location.copy}</p>
               </div>
-            </article>
+            </button>
           ))}
         </div>
+        {selectedLocation?.image && (
+          <figure className="locationPreview">
+            <img src={selectedLocation.image} alt={`${selectedLocation.name} – großes Locationbild`} />
+            <figcaption>
+              <span><strong>{selectedLocation.name}</strong> · {selectedLocation.copy}</span>
+              <button type="button" onClick={() => setSelectedLocation(null)}>Bild schließen</button>
+            </figcaption>
+          </figure>
+        )}
         <p className="bodyCopy">
           Ob pulsierender Dancefloor, futuristische Black-Level-Nacht, tropische
           Blue Lagoon oder düster-gemütliche Taverne: Die Chaoten Bande ist Gastgeber für Partys,
@@ -81,6 +103,18 @@ export default function Home() {
           draußen bleibt. Unsere DJs & DJanes liefern den Soundtrack – ihr macht
           die Nacht legendär.
         </p>
+      </section>
+
+      <section className="discordSection" id="discord">
+        <p className="eyebrow">Bleib mit der Bande verbunden</p>
+        <h2>Komm auf unseren<br /><em>Discord-Server</em></h2>
+        <p className="discordCopy">
+          Triff die Chaoten Bande, erfahre von kommenden Partys und Locations
+          und werde Teil unserer Community.
+        </p>
+        <a className="discordButton" href="https://discord.gg/CpmmsBNF3g" target="_blank" rel="noreferrer">
+          Discord-Server beitreten <span>↗</span>
+        </a>
       </section>
 
       <section className="section tribe" id="stamm">
@@ -112,18 +146,6 @@ export default function Home() {
           Chaoten Bande gefeiert hat, bleibt nicht einfach Gast – sondern wird
           Teil der Geschichte.
         </p>
-      </section>
-
-      <section className="discordSection" id="discord">
-        <p className="eyebrow">Bleib mit der Bande verbunden</p>
-        <h2>Komm auf unseren<br /><em>Discord-Server</em></h2>
-        <p className="discordCopy">
-          Triff die Chaoten Bande, erfahre von kommenden Partys und Locations
-          und werde Teil unserer Community.
-        </p>
-        <a className="discordButton" href="https://discord.gg/CpmmsBNF3g" target="_blank" rel="noreferrer">
-          Discord-Server beitreten <span>↗</span>
-        </a>
       </section>
 
       <section className="memory" id="memory">

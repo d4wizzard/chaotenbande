@@ -19,8 +19,8 @@
       <a class="brand" href="#top">CHAOTEN<span>BANDE</span></a>
       <div class="navlinks">
         <a href="#locations">Locations</a>
-        <a href="#stamm">Der Stamm</a>
         <a href="#discord">Discord</a>
+        <a href="#stamm">Der Stamm</a>
         <a href="#memory">Erinnerung</a>
       </div>
     </nav>
@@ -48,12 +48,23 @@
         <h2>Vier Welten.<br>Ein Gefühl.</h2>
       </div>
       <div class="locationGrid">
-        <article class="locationCard card1"><span>01</span><div><div class="locationTitle"><span class="cbTag">CB</span><h3>GER Danceparty</h3></div><p>Neon. Bass. Ekstase.</p></div></article>
-        <article class="locationCard card2"><span>02</span><div><div class="locationTitle"><span class="cbTag">CB</span><h3>Black_Level</h3></div><p>Dunkel. Elektrisch. Grenzenlos.</p></div></article>
-        <article class="locationCard card3"><span>03</span><div><div class="locationTitle"><span class="cbTag">CB</span><h3>Blue Lagoon</h3></div><p>Tropisch. Leuchtend. Frei.</p></div></article>
-        <article class="locationCard card4"><span>04</span><div><div class="locationTitle"><span class="cbTag">CB</span><h3>Blacks Tavern</h3></div><p>Mystisch. Wild. Unvergesslich.</p></div></article>
+        <button class="locationCard card1" type="button" data-location-image="ger-danceparty-club.jpg" data-location-name="GER Danceparty" data-location-copy="Neon. Bass. Ekstase." aria-label="GER Danceparty groß anzeigen"><span>01</span><div><div class="locationTitle"><span class="cbTag">CB</span><h3>GER Danceparty</h3></div><p>Neon. Bass. Ekstase.</p></div></button>
+        <button class="locationCard card2" type="button" disabled aria-label="Black_Level – noch kein Bild vorhanden"><span>02</span><div><div class="locationTitle"><span class="cbTag">CB</span><h3>Black_Level</h3></div><p>Dunkel. Elektrisch. Grenzenlos.</p></div></button>
+        <button class="locationCard card3" type="button" data-location-image="blue-lagoon-dance-club.jpg" data-location-name="Blue Lagoon" data-location-copy="Tropisch. Leuchtend. Frei." aria-label="Blue Lagoon groß anzeigen"><span>03</span><div><div class="locationTitle"><span class="cbTag">CB</span><h3>Blue Lagoon</h3></div><p>Tropisch. Leuchtend. Frei.</p></div></button>
+        <button class="locationCard card4" type="button" data-location-image="blacks-tavern.jpg" data-location-name="Blacks Tavern" data-location-copy="Mystisch. Wild. Unvergesslich." aria-label="Blacks Tavern groß anzeigen"><span>04</span><div><div class="locationTitle"><span class="cbTag">CB</span><h3>Blacks Tavern</h3></div><p>Mystisch. Wild. Unvergesslich.</p></div></button>
       </div>
+      <figure class="locationPreview" hidden>
+        <img src="" alt="">
+        <figcaption><span></span><button type="button">Bild schließen</button></figcaption>
+      </figure>
       <p class="bodyCopy">Ob pulsierender Dancefloor, futuristische Black-Level-Nacht, tropische Blue Lagoon oder düster-gemütliche Taverne: Die Chaoten Bande ist Gastgeber für Partys, bei denen Beats verbinden, Freundschaften entstehen und der Alltag draußen bleibt. Unsere DJs & DJanes liefern den Soundtrack – ihr macht die Nacht legendär.</p>
+    </section>
+
+    <section class="discordSection" id="discord">
+      <p class="eyebrow">Bleib mit der Bande verbunden</p>
+      <h2>Komm auf unseren<br><em>Discord-Server</em></h2>
+      <p class="discordCopy">Triff die Chaoten Bande, erfahre von kommenden Partys und Locations und werde Teil unserer Community.</p>
+      <a class="discordButton" href="https://discord.gg/CpmmsBNF3g" target="_blank" rel="noreferrer">Discord-Server beitreten <span>↗</span></a>
     </section>
 
     <section class="section tribe" id="stamm">
@@ -70,13 +81,6 @@
         <article class="member"><img class="memberPhoto" src="volker.png" alt="Porträt von 🐾⇺≾⊋VØⱠ₭ɆⱤ⊊≿⇻🐾" style="object-position:center 18%"><h3>🐾⇺≾⊋VØⱠ₭ɆⱤ⊊≿⇻🐾</h3><p>Stärke & Loyalität</p></article>
       </div>
       <p class="tribeCopy">Sechs Namen, ein Herzschlag. Gemeinsam schaffen sie Räume voller Freiheit, Respekt, Musik und echter Verbundenheit. Wer einmal mit der Chaoten Bande gefeiert hat, bleibt nicht einfach Gast – sondern wird Teil der Geschichte.</p>
-    </section>
-
-    <section class="discordSection" id="discord">
-      <p class="eyebrow">Bleib mit der Bande verbunden</p>
-      <h2>Komm auf unseren<br><em>Discord-Server</em></h2>
-      <p class="discordCopy">Triff die Chaoten Bande, erfahre von kommenden Partys und Locations und werde Teil unserer Community.</p>
-      <a class="discordButton" href="https://discord.gg/CpmmsBNF3g" target="_blank" rel="noreferrer">Discord-Server beitreten <span>↗</span></a>
     </section>
 
     <section class="memory" id="memory">
@@ -101,5 +105,22 @@
       <p class="small">Mit Herz, Bass und Erinnerung.</p>
     </footer>
   </main>
+  <script>
+    const locationPreview = document.querySelector('.locationPreview');
+    const locationPreviewImage = locationPreview.querySelector('img');
+    const locationPreviewCaption = locationPreview.querySelector('figcaption span');
+    document.querySelectorAll('[data-location-image]').forEach((button) => {
+      button.addEventListener('click', () => {
+        locationPreviewImage.src = button.dataset.locationImage;
+        locationPreviewImage.alt = `${button.dataset.locationName} – großes Locationbild`;
+        locationPreviewCaption.textContent = `${button.dataset.locationName} · ${button.dataset.locationCopy}`;
+        locationPreview.hidden = false;
+        locationPreview.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      });
+    });
+    locationPreview.querySelector('button').addEventListener('click', () => {
+      locationPreview.hidden = true;
+    });
+  </script>
 </body>
 </html>
