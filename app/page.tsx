@@ -20,6 +20,7 @@ const locations = [
 
 export default function Home() {
   const [selectedLocation, setSelectedLocation] = useState<(typeof locations)[number] | null>(null);
+  const [selectedMember, setSelectedMember] = useState<(typeof members)[number] | null>(null);
 
   return (
     <main>
@@ -126,12 +127,19 @@ export default function Home() {
           {members.map((member, index) => (
             <article className="member" key={member.name}>
               {member.image ? (
-                <img
-                  className="memberPhoto"
-                  src={member.image}
-                  alt={`Porträt von ${member.name}`}
-                  style={{ objectPosition: member.position ?? "center" }}
-                />
+                <button
+                  className="memberPhotoButton"
+                  type="button"
+                  onClick={() => setSelectedMember(member)}
+                  aria-label={`${member.name} groß anzeigen`}
+                >
+                  <img
+                    className="memberPhoto"
+                    src={member.image}
+                    alt={`Porträt von ${member.name}`}
+                    style={{ objectPosition: member.position ?? "center" }}
+                  />
+                </button>
               ) : (
                 <div className="avatar">{String(index + 1).padStart(2, "0")}</div>
               )}
@@ -140,6 +148,15 @@ export default function Home() {
             </article>
           ))}
         </div>
+        {selectedMember && (
+          <figure className="memberPreview">
+            <img src={selectedMember.image} alt={`${selectedMember.name} – großes Porträt`} />
+            <figcaption>
+              <span><strong>{selectedMember.name}</strong> · {selectedMember.role}</span>
+              <button type="button" onClick={() => setSelectedMember(null)}>Bild schließen</button>
+            </figcaption>
+          </figure>
+        )}
         <p className="tribeCopy">
           Sechs Namen, ein Herzschlag. Gemeinsam schaffen sie Räume voller
           Freiheit, Respekt, Musik und echter Verbundenheit. Wer einmal mit der

@@ -73,13 +73,17 @@
         <h2>Der Stamm der<br><em>Chaoten Bande</em></h2>
       </div>
       <div class="memberGrid">
-        <article class="member"><img class="memberPhoto" src="mr-blackangel.png" alt="Porträt von Mr_BlackAngel"><h3>Mr_BlackAngel</h3><p>Herz & Haltung</p></article>
-        <article class="member"><img class="memberPhoto" src="mrs-blackangel.png" alt="Porträt von Mrs_BlackAngel"><h3>Mrs_BlackAngel</h3><p>Glanz & Gefühl</p></article>
-        <article class="member"><img class="memberPhoto" src="bloodyrose.jpg" alt="Porträt von BloodyRose" style="object-position:center 25%"><h3>BloodyRose</h3><p>Feuer & Leidenschaft</p></article>
-        <article class="member"><img class="memberPhoto" src="iamxox.png" alt="Porträt von IamXox" style="object-position:center 18%"><h3>IamXox</h3><p>Energie & Euphorie</p></article>
-        <article class="member"><img class="memberPhoto" src="kimlee-darkside.png?v=20260801" alt="Porträt von KimLee_Darkside" style="object-position:center 22%"><h3>KimLee_Darkside</h3><p>Charme & Magie</p></article>
-        <article class="member"><img class="memberPhoto" src="volker.png" alt="Porträt von 🐾⇺≾⊋VØⱠ₭ɆⱤ⊊≿⇻🐾" style="object-position:center 18%"><h3>🐾⇺≾⊋VØⱠ₭ɆⱤ⊊≿⇻🐾</h3><p>Stärke & Loyalität</p></article>
+        <article class="member"><button class="memberPhotoButton" type="button" data-member-image="mr-blackangel.png" data-member-name="Mr_BlackAngel" data-member-role="Herz & Haltung" aria-label="Mr_BlackAngel groß anzeigen"><img class="memberPhoto" src="mr-blackangel.png" alt="Porträt von Mr_BlackAngel"></button><h3>Mr_BlackAngel</h3><p>Herz & Haltung</p></article>
+        <article class="member"><button class="memberPhotoButton" type="button" data-member-image="mrs-blackangel.png" data-member-name="Mrs_BlackAngel" data-member-role="Glanz & Gefühl" aria-label="Mrs_BlackAngel groß anzeigen"><img class="memberPhoto" src="mrs-blackangel.png" alt="Porträt von Mrs_BlackAngel"></button><h3>Mrs_BlackAngel</h3><p>Glanz & Gefühl</p></article>
+        <article class="member"><button class="memberPhotoButton" type="button" data-member-image="bloodyrose.jpg" data-member-name="BloodyRose" data-member-role="Feuer & Leidenschaft" aria-label="BloodyRose groß anzeigen"><img class="memberPhoto" src="bloodyrose.jpg" alt="Porträt von BloodyRose" style="object-position:center 25%"></button><h3>BloodyRose</h3><p>Feuer & Leidenschaft</p></article>
+        <article class="member"><button class="memberPhotoButton" type="button" data-member-image="iamxox.png" data-member-name="IamXox" data-member-role="Energie & Euphorie" aria-label="IamXox groß anzeigen"><img class="memberPhoto" src="iamxox.png" alt="Porträt von IamXox" style="object-position:center 18%"></button><h3>IamXox</h3><p>Energie & Euphorie</p></article>
+        <article class="member"><button class="memberPhotoButton" type="button" data-member-image="kimlee-darkside.png?v=20260801" data-member-name="KimLee_Darkside" data-member-role="Charme & Magie" aria-label="KimLee_Darkside groß anzeigen"><img class="memberPhoto" src="kimlee-darkside.png?v=20260801" alt="Porträt von KimLee_Darkside" style="object-position:center 22%"></button><h3>KimLee_Darkside</h3><p>Charme & Magie</p></article>
+        <article class="member"><button class="memberPhotoButton" type="button" data-member-image="volker.png" data-member-name="🐾⇺≾⊋VØⱠ₭ɆⱤ⊊≿⇻🐾" data-member-role="Stärke & Loyalität" aria-label="🐾⇺≾⊋VØⱠ₭ɆⱤ⊊≿⇻🐾 groß anzeigen"><img class="memberPhoto" src="volker.png" alt="Porträt von 🐾⇺≾⊋VØⱠ₭ɆⱤ⊊≿⇻🐾" style="object-position:center 18%"></button><h3>🐾⇺≾⊋VØⱠ₭ɆⱤ⊊≿⇻🐾</h3><p>Stärke & Loyalität</p></article>
       </div>
+      <figure class="memberPreview" hidden>
+        <img src="" alt="">
+        <figcaption><span></span><button type="button">Bild schließen</button></figcaption>
+      </figure>
       <p class="tribeCopy">Sechs Namen, ein Herzschlag. Gemeinsam schaffen sie Räume voller Freiheit, Respekt, Musik und echter Verbundenheit. Wer einmal mit der Chaoten Bande gefeiert hat, bleibt nicht einfach Gast – sondern wird Teil der Geschichte.</p>
     </section>
 
@@ -120,6 +124,21 @@
     });
     locationPreview.querySelector('button').addEventListener('click', () => {
       locationPreview.hidden = true;
+    });
+    const memberPreview = document.querySelector('.memberPreview');
+    const memberPreviewImage = memberPreview.querySelector('img');
+    const memberPreviewCaption = memberPreview.querySelector('figcaption span');
+    document.querySelectorAll('[data-member-image]').forEach((button) => {
+      button.addEventListener('click', () => {
+        memberPreviewImage.src = button.dataset.memberImage;
+        memberPreviewImage.alt = `${button.dataset.memberName} – großes Porträt`;
+        memberPreviewCaption.textContent = `${button.dataset.memberName} · ${button.dataset.memberRole}`;
+        memberPreview.hidden = false;
+        memberPreview.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      });
+    });
+    memberPreview.querySelector('button').addEventListener('click', () => {
+      memberPreview.hidden = true;
     });
   </script>
 </body>

@@ -211,11 +211,20 @@ h1 em, h2 em { color: var(--pink-soft); font-weight: 400; }
   width: min(100%, 230px);
   aspect-ratio: 1;
   object-fit: cover;
-  margin: 0 auto 24px;
+  margin: 0 auto;
   border-radius: 50%;
   border: 1px solid rgba(232,162,51,.6);
   box-shadow: 0 0 28px rgba(232,162,51,.14);
 }
+.memberPhotoButton { display: block; padding: 0; margin: 0 auto 24px; border: 0; border-radius: 50%; background: transparent; cursor: pointer; }
+.memberPhotoButton:hover .memberPhoto,
+.memberPhotoButton:focus-visible .memberPhoto { border-color: var(--pink-soft); box-shadow: 0 0 38px rgba(255,45,171,.32); }
+.memberPreview { width: min(920px, 100%); margin: 0 auto 38px; padding: 4px; background: #080609; border: 1px solid rgba(255,255,255,.16); box-shadow: 0 24px 70px rgba(0,0,0,.5); }
+.memberPreview[hidden] { display: none; }
+.memberPreview img { display: block; width: 100%; max-height: 760px; object-fit: contain; background: #030203; }
+.memberPreview figcaption { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 12px 14px 8px; color: var(--muted); overflow-wrap: anywhere; }
+.memberPreview figcaption strong { color: #fff; }
+.memberPreview button { flex: 0 0 auto; padding: 8px 12px; color: #fff; background: transparent; border: 1px solid rgba(255,255,255,.2); cursor: pointer; }
 .avatar {
   width: 72px; height: 72px; margin: auto auto 24px; border: 1px solid #63304f; border-radius: 50%;
   display: grid; place-items: center; color: var(--pink-soft); font-family: Georgia, serif;
