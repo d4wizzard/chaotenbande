@@ -51,6 +51,11 @@ a { color: inherit; text-decoration: none; }
 .brand span { color: var(--pink); }
 .navlinks { display: flex; gap: 2rem; color: #dacdda; font-size: .82rem; letter-spacing: .1em; text-transform: uppercase; }
 .navlinks a:hover { color: var(--pink-soft); }
+.navRight { display: flex; align-items: center; gap: 24px; }
+.languageSwitch { display: flex; gap: 4px; }
+.languageSwitch button { padding: 5px 7px; color: #a99ca9; background: transparent; border: 1px solid transparent; cursor: pointer; font: 700 .66rem "Trebuchet MS", Arial, sans-serif; }
+.languageSwitch button:hover,
+.languageSwitch button.active { color: #fff; border-color: rgba(255,45,171,.5); background: rgba(255,45,171,.1); }
 
 .hero {
   min-height: 0;
@@ -305,7 +310,7 @@ footer .small { font-size: .7rem; letter-spacing: .12em; text-transform: upperca
 
 @media (max-width: 800px) {
   .navlinks { display: none; }
-  .nav { justify-content: center; }
+  .nav { justify-content: space-between; padding-inline: 20px; }
   .hero { min-height: 0; padding-top: 92px; }
   .statement { flex-wrap: wrap; gap: .7rem; padding: 24px; text-align: center; }
   .locations { display: block; }
