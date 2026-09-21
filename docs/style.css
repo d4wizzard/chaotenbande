@@ -337,3 +337,136 @@ footer .small { font-size: .7rem; letter-spacing: .12em; text-transform: upperca
   html { scroll-behavior: auto; }
   .member { transition: none; }
 }
+
+/* ---------- Partnerbörse ---------- */
+.partner {
+  padding: 96px 7vw 88px;
+  border-top: 1px solid rgba(160,110,255,.22);
+  background:
+    radial-gradient(circle at 18% 22%, rgba(107,77,255,.24), transparent 38%),
+    radial-gradient(circle at 86% 78%, rgba(67,191,255,.15), transparent 40%),
+    #060410;
+  overflow: hidden;
+}
+.partnerInner {
+  width: min(1240px, 100%);
+  margin: auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+  gap: clamp(28px, 4vw, 64px);
+  align-items: center;
+}
+.partnerPhoto {
+  margin: 0;
+  padding: 4px;
+  border: 1px solid rgba(180,150,255,.38);
+  background: rgba(255,255,255,.03);
+  box-shadow: 0 0 46px rgba(120,90,255,.25), 0 26px 70px rgba(0,0,0,.5);
+  animation: partnerGlow 5.5s ease-in-out infinite;
+}
+.partnerPhoto img { display: block; width: 100%; height: auto; }
+.partnerCopy { text-align: left; }
+.partner h2 { font-size: clamp(2.4rem, 4.6vw, 4.4rem); }
+.partner h2 em { color: #c6b5ff; }
+.partnerRotator {
+  position: relative;
+  height: 2.9em;
+  margin: 12px 0 8px;
+  font: italic clamp(1.15rem, 2vw, 1.55rem)/1.3 Georgia, "Times New Roman", serif;
+  color: var(--pink-soft);
+  text-shadow: 0 0 22px rgba(255,45,171,.55);
+}
+.rotLine {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity .8s ease, transform .8s ease;
+  pointer-events: none;
+}
+.rotLine.is-active { opacity: 1; transform: none; }
+.rotLine::before { content: "♥ "; color: var(--pink); }
+.partnerLead { max-width: 560px; margin: 0 0 26px; color: var(--muted); line-height: 1.75; }
+.partnerAsk { margin: 0 0 10px; color: #cbbcff; text-transform: uppercase; letter-spacing: .2em; font-size: .72rem; font-weight: 700; }
+.pmBox {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px 22px;
+  width: fit-content;
+  max-width: 100%;
+  padding: 16px 22px;
+  border: 1px solid rgba(190,160,255,.5);
+  background: linear-gradient(135deg, rgba(58,32,120,.5), rgba(12,8,30,.85));
+  box-shadow: inset 0 0 30px rgba(140,100,255,.16), 0 0 40px rgba(140,100,255,.22);
+}
+.pmCommand {
+  font: italic clamp(1.9rem, 3.6vw, 3rem)/1 Georgia, "Times New Roman", serif;
+  color: #fff;
+  white-space: nowrap;
+  text-shadow: 0 0 12px #b993ff, 0 0 32px #8a5cff;
+  animation: pmPulse 2.8s ease-in-out infinite;
+}
+.pmTyped.typing { border-right: 2px solid #d9c8ff; animation: pmCaret .7s steps(1) infinite; }
+.pmRest { visibility: hidden; }
+.pmCopy {
+  padding: 11px 18px;
+  color: #fff;
+  background: rgba(255,45,171,.1);
+  border: 1px solid rgba(255,45,171,.55);
+  letter-spacing: .08em;
+  font: 700 .74rem "Trebuchet MS", Arial, sans-serif;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background .2s ease, box-shadow .2s ease;
+}
+.pmCopy:hover, .pmCopy.done { background: var(--pink); box-shadow: 0 0 30px rgba(255,45,171,.45); }
+.partnerPoster {
+  position: relative;
+  display: block;
+  width: min(1100px, 100%);
+  margin: 56px auto 0;
+  padding: 4px;
+  border: 1px solid rgba(180,150,255,.32);
+  background: rgba(255,255,255,.03);
+  box-shadow: 0 26px 70px rgba(0,0,0,.5);
+}
+.partnerPoster img { display: block; width: 100%; height: auto; }
+.partnerPoster span {
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+  padding: 6px 10px;
+  color: #e9dfff;
+  background: rgba(5,3,7,.75);
+  border: 1px solid rgba(255,255,255,.2);
+  font-size: .66rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+@keyframes partnerGlow {
+  0%, 100% { box-shadow: 0 0 34px rgba(120,90,255,.18), 0 26px 70px rgba(0,0,0,.5); }
+  50% { box-shadow: 0 0 74px rgba(150,110,255,.48), 0 26px 70px rgba(0,0,0,.5); }
+}
+@keyframes pmPulse {
+  0%, 100% { text-shadow: 0 0 10px #b993ff, 0 0 24px #8a5cff; }
+  50% { text-shadow: 0 0 18px #e3d5ff, 0 0 50px #a16bff; }
+}
+@keyframes pmCaret { 50% { border-right-color: transparent; } }
+
+@media (max-width: 860px) {
+  .partner { padding: 76px 20px 70px; }
+  .partnerInner { grid-template-columns: 1fr; }
+  .partnerCopy { text-align: center; }
+  .partnerLead { margin-inline: auto; }
+  .partnerRotator { text-align: center; }
+  .pmBox { margin-inline: auto; justify-content: center; }
+  .partnerPoster { margin-top: 40px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .partnerPhoto, .pmCommand, .pmTyped.typing { animation: none; }
+  .rotLine { transition: none; }
+}

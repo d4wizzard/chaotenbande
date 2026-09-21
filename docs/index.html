@@ -11,7 +11,7 @@
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="chaotenbande.png?v=20260807">
-  <link rel="stylesheet" href="style.css?v=10">
+  <link rel="stylesheet" href="style.css?v=11">
 </head>
 <body>
   <main>
@@ -20,6 +20,7 @@
       <div class="navRight"><div class="navlinks">
         <a href="#locations">Locations</a>
         <a href="#discord">Discord</a>
+        <a href="#partnerboerse">Partnerbörse</a>
         <a href="#stamm">Der Stamm</a>
         <a href="#memory">Erinnerung</a>
       </div><div class="languageSwitch" aria-label="Language"><button type="button" data-lang="de">DE</button><button type="button" data-lang="en">EN</button><button type="button" data-lang="it">IT</button><button type="button" data-lang="es">ES</button></div></div>
@@ -67,6 +68,29 @@
       <a class="discordButton" href="https://discord.gg/CpmmsBNF3g" target="_blank" rel="noreferrer">Discord-Server beitreten <span>↗</span></a>
     </section>
 
+    <section class="partner" id="partnerboerse" aria-labelledby="partnerTitle">
+      <div class="partnerInner">
+        <figure class="partnerPhoto">
+          <img src="partnerboerse-paar.jpg" width="1600" height="901" loading="lazy" alt="Ein Paar sitzt eng beieinander auf der neonblauen Tanzfläche der Chaotenbande.">
+        </figure>
+        <div class="partnerCopy">
+          <p class="eyebrow">Partnerbörse</p>
+          <h2 id="partnerTitle">BlackRaven sucht<br><em>eine treue Begleiterin</em></h2>
+          <p class="partnerRotator"><span class="rotLine is-active">Gemeinsam mehr erleben…</span><span class="rotLine">Mehr als nur ein Game… Vielleicht wir?</span><span class="rotLine">Vielleicht schreibt genau Du das nächste Kapitel…</span></p>
+          <p class="partnerLead">Es geht um Nähe, Ehrlichkeit, Vertrauen und Humor – um Gaming, Musik, Streaming, Reisen und gute Gespräche, gern auch auf Discord. Gesucht wird eine treue, ehrliche Partnerin für langfristig.</p>
+          <p class="partnerAsk">Nur ernst gemeinte Anfragen an:</p>
+          <div class="pmBox">
+            <code class="pmCommand" data-text="/pm BlackRaven" aria-label="/pm BlackRaven"><span class="pmTyped" aria-hidden="true">/pm BlackRaven</span><span class="pmRest" aria-hidden="true"></span></code>
+            <button class="pmCopy" type="button">Kopieren</button>
+          </div>
+        </div>
+      </div>
+      <a class="partnerPoster" href="partnerboerse-poster.jpg" target="_blank" rel="noreferrer">
+        <img src="partnerboerse-poster.jpg" width="1669" height="942" loading="lazy" alt="Partnerbörse-Plakat: BlackRaven ist auf der Suche nach einer treuen Begleiterin. Nur ernst gemeinte Anfragen an /pm BlackRaven.">
+        <span>Zum Vergrößern anklicken</span>
+      </a>
+    </section>
+
     <section class="section tribe" id="stamm">
       <div class="sectionHeading centered">
         <p class="eyebrow">Das Herz jeder Nacht</p>
@@ -111,15 +135,16 @@
   </main>
   <script>
     const translations = {
-      de:{nav:["Der Stamm","Erinnerung"],hero:["Wir feiern. Wir leben. Wir sind die Chaoten Bande.","Nächte, die","Geschichte schreiben.","Die Chaoten Bande bringt Menschen, Musik und magische Locations zusammen – mit großartigen DJs & DJanes und einer Community, die jede Nacht zu etwas Besonderem macht.","Entdecke unsere Welt"],statement:["Eine Bande","Vier legendäre Orte","Unendliche Nächte"],locHead:["Wo Chaos zu Magie wird","Vier Welten.","Ein Gefühl."],loc:["Neon. Bass. Ekstase.","Dunkel. Elektrisch. Grenzenlos.","Tropisch. Leuchtend. Frei.","Mystisch. Wild. Unvergesslich."],body:"Ob pulsierender Dancefloor, futuristische Black-Level-Nacht, tropische Blue Lagoon oder düster-gemütliche Taverne: Die Chaoten Bande ist Gastgeber für Partys, bei denen Beats verbinden, Freundschaften entstehen und der Alltag draußen bleibt. Unsere DJs & DJanes liefern den Soundtrack – ihr macht die Nacht legendär.",discord:["Bleib mit der Bande verbunden","Komm auf unseren","Discord-Server","Triff die Chaoten Bande, erfahre von kommenden Partys und Locations und werde Teil unserer Community.","Discord-Server beitreten"],tribe:["Das Herz jeder Nacht","Der Stamm der","Chaoten Bande","Sechs Namen, ein Herzschlag. Gemeinsam schaffen sie Räume voller Freiheit, Respekt, Musik und echter Verbundenheit. Wer einmal mit der Chaoten Bande gefeiert hat, bleibt nicht einfach Gast – sondern wird Teil der Geschichte."],roles:["Herz & Haltung","Glanz & Gefühl","Feuer & Leidenschaft","Energie & Euphorie","Charme & Magie","Stärke & Loyalität"],memory:["Für immer Teil unseres Sounds","In Erinnerung an","Manche Stimmen verstummen – doch ihre Melodie bleibt in unseren Herzen und in jeder Nacht, die wir gemeinsam feiern.","Unvergessen. Unendlich. Immer dabei."],footer:["Wir feiern. Wir leben. Wir sind die Chaoten Bande.","Mit Herz, Bass und Erinnerung."],close:"Bild schließen",large:"groß anzeigen",noImage:"noch kein Bild vorhanden"},
-      en:{nav:["The Crew","In Memory"],hero:["We celebrate. We live. We are the Chaoten Bande.","Nights that","make history.","The Chaoten Bande brings people, music and magical locations together – with amazing DJs and a community that turns every night into something special.","Discover our world"],statement:["One crew","Four legendary places","Endless nights"],locHead:["Where chaos becomes magic","Four worlds.","One feeling."],loc:["Neon. Bass. Ecstasy.","Dark. Electric. Limitless.","Tropical. Luminous. Free.","Mystical. Wild. Unforgettable."],body:"Whether a pulsating dance floor, a futuristic Black Level night, the tropical Blue Lagoon or the dark and cosy tavern: the Chaoten Bande hosts parties where beats connect people, friendships begin and everyday life stays outside. Our DJs deliver the soundtrack – you make the night legendary.",discord:["Stay connected with the crew","Join our","Discord server","Meet the Chaoten Bande, hear about upcoming parties and locations, and become part of our community.","Join the Discord server"],tribe:["The heart of every night","The crew of the","Chaoten Bande","Six names, one heartbeat. Together they create spaces filled with freedom, respect, music and genuine connection. Once you celebrate with the Chaoten Bande, you become part of the story."],roles:["Heart & Attitude","Shine & Emotion","Fire & Passion","Energy & Euphoria","Charm & Magic","Strength & Loyalty"],memory:["Forever part of our sound","In memory of","Some voices fall silent – but their melody remains in our hearts and in every night we celebrate together.","Unforgotten. Infinite. Always with us."],footer:["We celebrate. We live. We are the Chaoten Bande.","With heart, bass and remembrance."],close:"Close image",large:"show large",noImage:"no image available yet"},
-      it:{nav:["Il gruppo","In ricordo"],hero:["Festeggiamo. Viviamo. Siamo la Chaoten Bande.","Notti che","fanno la storia.","La Chaoten Bande unisce persone, musica e location magiche – con fantastici DJ e una community che rende speciale ogni notte.","Scopri il nostro mondo"],statement:["Un gruppo","Quattro luoghi leggendari","Notti infinite"],locHead:["Dove il caos diventa magia","Quattro mondi.","Un solo sentimento."],loc:["Neon. Bassi. Estasi.","Oscuro. Elettrico. Senza limiti.","Tropicale. Luminoso. Libero.","Misterioso. Selvaggio. Indimenticabile."],body:"Tra pista pulsante, notte futuristica al Black Level, la tropicale Blue Lagoon e l'accogliente taverna dark, la Chaoten Bande ospita feste in cui i beat uniscono, nascono amicizie e la vita quotidiana resta fuori. I nostri DJ creano la colonna sonora – voi rendete la notte leggendaria.",discord:["Resta connesso con il gruppo","Entra nel nostro","server Discord","Incontra la Chaoten Bande, scopri le prossime feste e location ed entra nella nostra community.","Entra nel server Discord"],tribe:["Il cuore di ogni notte","Il gruppo della","Chaoten Bande","Sei nomi, un solo battito. Insieme creano spazi pieni di libertà, rispetto, musica e legami autentici. Chi festeggia con la Chaoten Bande diventa parte della storia."],roles:["Cuore & Carattere","Splendore & Emozione","Fuoco & Passione","Energia & Euforia","Fascino & Magia","Forza & Lealtà"],memory:["Per sempre parte del nostro sound","In ricordo di","Alcune voci tacciono – ma la loro melodia rimane nei nostri cuori e in ogni notte che festeggiamo insieme.","Indimenticabile. Infinito. Sempre con noi."],footer:["Festeggiamo. Viviamo. Siamo la Chaoten Bande.","Con cuore, bassi e ricordo."],close:"Chiudi immagine",large:"mostra grande",noImage:"immagine non ancora disponibile"},
-      es:{nav:["La banda","En memoria"],hero:["Celebramos. Vivimos. Somos la Chaoten Bande.","Noches que","hacen historia.","La Chaoten Bande reúne personas, música y lugares mágicos, con DJs increíbles y una comunidad que convierte cada noche en algo especial.","Descubre nuestro mundo"],statement:["Una banda","Cuatro lugares legendarios","Noches infinitas"],locHead:["Donde el caos se vuelve magia","Cuatro mundos.","Un sentimiento."],loc:["Neón. Bajos. Éxtasis.","Oscuro. Eléctrico. Sin límites.","Tropical. Luminoso. Libre.","Místico. Salvaje. Inolvidable."],body:"Ya sea una pista vibrante, una noche futurista en Black Level, la tropical Blue Lagoon o la acogedora taberna oscura: la Chaoten Bande organiza fiestas donde los ritmos conectan, nacen amistades y la rutina queda fuera. Nuestros DJs ponen la banda sonora – vosotros hacéis legendaria la noche.",discord:["Sigue conectado con la banda","Únete a nuestro","servidor de Discord","Conoce a la Chaoten Bande, descubre próximas fiestas y lugares y forma parte de nuestra comunidad.","Unirse al servidor de Discord"],tribe:["El corazón de cada noche","La banda de","Chaoten Bande","Seis nombres, un solo latido. Juntos crean espacios llenos de libertad, respeto, música y conexión auténtica. Quien celebra con la Chaoten Bande pasa a formar parte de la historia."],roles:["Corazón & Actitud","Brillo & Emoción","Fuego & Pasión","Energía & Euforia","Encanto & Magia","Fuerza & Lealtad"],memory:["Para siempre parte de nuestro sonido","En memoria de","Algunas voces se apagan, pero su melodía permanece en nuestros corazones y en cada noche que celebramos juntos.","Inolvidable. Infinito. Siempre con nosotros."],footer:["Celebramos. Vivimos. Somos la Chaoten Bande.","Con corazón, bajos y recuerdo."],close:"Cerrar imagen",large:"mostrar grande",noImage:"imagen aún no disponible"}
+      de:{nav:["Der Stamm","Erinnerung"],hero:["Wir feiern. Wir leben. Wir sind die Chaoten Bande.","Nächte, die","Geschichte schreiben.","Die Chaoten Bande bringt Menschen, Musik und magische Locations zusammen – mit großartigen DJs & DJanes und einer Community, die jede Nacht zu etwas Besonderem macht.","Entdecke unsere Welt"],statement:["Eine Bande","Vier legendäre Orte","Unendliche Nächte"],locHead:["Wo Chaos zu Magie wird","Vier Welten.","Ein Gefühl."],loc:["Neon. Bass. Ekstase.","Dunkel. Elektrisch. Grenzenlos.","Tropisch. Leuchtend. Frei.","Mystisch. Wild. Unvergesslich."],body:"Ob pulsierender Dancefloor, futuristische Black-Level-Nacht, tropische Blue Lagoon oder düster-gemütliche Taverne: Die Chaoten Bande ist Gastgeber für Partys, bei denen Beats verbinden, Freundschaften entstehen und der Alltag draußen bleibt. Unsere DJs & DJanes liefern den Soundtrack – ihr macht die Nacht legendär.",discord:["Bleib mit der Bande verbunden","Komm auf unseren","Discord-Server","Triff die Chaoten Bande, erfahre von kommenden Partys und Locations und werde Teil unserer Community.","Discord-Server beitreten"],tribe:["Das Herz jeder Nacht","Der Stamm der","Chaoten Bande","Sechs Namen, ein Herzschlag. Gemeinsam schaffen sie Räume voller Freiheit, Respekt, Musik und echter Verbundenheit. Wer einmal mit der Chaoten Bande gefeiert hat, bleibt nicht einfach Gast – sondern wird Teil der Geschichte."],roles:["Herz & Haltung","Glanz & Gefühl","Feuer & Leidenschaft","Energie & Euphorie","Charme & Magie","Stärke & Loyalität"],memory:["Für immer Teil unseres Sounds","In Erinnerung an","Manche Stimmen verstummen – doch ihre Melodie bleibt in unseren Herzen und in jeder Nacht, die wir gemeinsam feiern.","Unvergessen. Unendlich. Immer dabei."],footer:["Wir feiern. Wir leben. Wir sind die Chaoten Bande.","Mit Herz, Bass und Erinnerung."],partner:{nav:"Partnerbörse",eye:"Partnerbörse",h:["BlackRaven sucht","eine treue Begleiterin"],rot:["Gemeinsam mehr erleben…","Mehr als nur ein Game… Vielleicht wir?","Vielleicht schreibt genau Du das nächste Kapitel…"],lead:"Es geht um Nähe, Ehrlichkeit, Vertrauen und Humor – um Gaming, Musik, Streaming, Reisen und gute Gespräche, gern auch auf Discord. Gesucht wird eine treue, ehrliche Partnerin für langfristig.",ask:"Nur ernst gemeinte Anfragen an:",copy:"Kopieren",copied:"Kopiert ✓",poster:"Zum Vergrößern anklicken"},close:"Bild schließen",large:"groß anzeigen",noImage:"noch kein Bild vorhanden"},
+      en:{nav:["The Crew","In Memory"],hero:["We celebrate. We live. We are the Chaoten Bande.","Nights that","make history.","The Chaoten Bande brings people, music and magical locations together – with amazing DJs and a community that turns every night into something special.","Discover our world"],statement:["One crew","Four legendary places","Endless nights"],locHead:["Where chaos becomes magic","Four worlds.","One feeling."],loc:["Neon. Bass. Ecstasy.","Dark. Electric. Limitless.","Tropical. Luminous. Free.","Mystical. Wild. Unforgettable."],body:"Whether a pulsating dance floor, a futuristic Black Level night, the tropical Blue Lagoon or the dark and cosy tavern: the Chaoten Bande hosts parties where beats connect people, friendships begin and everyday life stays outside. Our DJs deliver the soundtrack – you make the night legendary.",discord:["Stay connected with the crew","Join our","Discord server","Meet the Chaoten Bande, hear about upcoming parties and locations, and become part of our community.","Join the Discord server"],tribe:["The heart of every night","The crew of the","Chaoten Bande","Six names, one heartbeat. Together they create spaces filled with freedom, respect, music and genuine connection. Once you celebrate with the Chaoten Bande, you become part of the story."],roles:["Heart & Attitude","Shine & Emotion","Fire & Passion","Energy & Euphoria","Charm & Magic","Strength & Loyalty"],memory:["Forever part of our sound","In memory of","Some voices fall silent – but their melody remains in our hearts and in every night we celebrate together.","Unforgotten. Infinite. Always with us."],footer:["We celebrate. We live. We are the Chaoten Bande.","With heart, bass and remembrance."],partner:{nav:"Partner Search",eye:"Partner Search",h:["BlackRaven is looking for","a loyal companion"],rot:["Experience more together…","More than just a game… maybe us?","Maybe you will write the next chapter…"],lead:"It is about closeness, honesty, trust and humour – about gaming, music, streaming, travel and good conversations, Discord chats very welcome. Looking for a loyal, honest partner for the long term.",ask:"Serious inquiries only, please message:",copy:"Copy",copied:"Copied ✓",poster:"Click to enlarge"},close:"Close image",large:"show large",noImage:"no image available yet"},
+      it:{nav:["Il gruppo","In ricordo"],hero:["Festeggiamo. Viviamo. Siamo la Chaoten Bande.","Notti che","fanno la storia.","La Chaoten Bande unisce persone, musica e location magiche – con fantastici DJ e una community che rende speciale ogni notte.","Scopri il nostro mondo"],statement:["Un gruppo","Quattro luoghi leggendari","Notti infinite"],locHead:["Dove il caos diventa magia","Quattro mondi.","Un solo sentimento."],loc:["Neon. Bassi. Estasi.","Oscuro. Elettrico. Senza limiti.","Tropicale. Luminoso. Libero.","Misterioso. Selvaggio. Indimenticabile."],body:"Tra pista pulsante, notte futuristica al Black Level, la tropicale Blue Lagoon e l'accogliente taverna dark, la Chaoten Bande ospita feste in cui i beat uniscono, nascono amicizie e la vita quotidiana resta fuori. I nostri DJ creano la colonna sonora – voi rendete la notte leggendaria.",discord:["Resta connesso con il gruppo","Entra nel nostro","server Discord","Incontra la Chaoten Bande, scopri le prossime feste e location ed entra nella nostra community.","Entra nel server Discord"],tribe:["Il cuore di ogni notte","Il gruppo della","Chaoten Bande","Sei nomi, un solo battito. Insieme creano spazi pieni di libertà, rispetto, musica e legami autentici. Chi festeggia con la Chaoten Bande diventa parte della storia."],roles:["Cuore & Carattere","Splendore & Emozione","Fuoco & Passione","Energia & Euforia","Fascino & Magia","Forza & Lealtà"],memory:["Per sempre parte del nostro sound","In ricordo di","Alcune voci tacciono – ma la loro melodia rimane nei nostri cuori e in ogni notte che festeggiamo insieme.","Indimenticabile. Infinito. Sempre con noi."],footer:["Festeggiamo. Viviamo. Siamo la Chaoten Bande.","Con cuore, bassi e ricordo."],partner:{nav:"Cerco partner",eye:"Cerco partner",h:["BlackRaven cerca","una compagna fedele"],rot:["Vivere di più, insieme…","Più di un semplice gioco… forse noi?","Forse sarai proprio tu a scrivere il prossimo capitolo…"],lead:"Si parla di vicinanza, sincerità, fiducia e umorismo – di gaming, musica, streaming, viaggi e belle conversazioni, anche su Discord. Si cerca una partner fedele e sincera per una relazione duratura.",ask:"Solo richieste serie a:",copy:"Copia",copied:"Copiato ✓",poster:"Clicca per ingrandire"},close:"Chiudi immagine",large:"mostra grande",noImage:"immagine non ancora disponibile"},
+      es:{nav:["La banda","En memoria"],hero:["Celebramos. Vivimos. Somos la Chaoten Bande.","Noches que","hacen historia.","La Chaoten Bande reúne personas, música y lugares mágicos, con DJs increíbles y una comunidad que convierte cada noche en algo especial.","Descubre nuestro mundo"],statement:["Una banda","Cuatro lugares legendarios","Noches infinitas"],locHead:["Donde el caos se vuelve magia","Cuatro mundos.","Un sentimiento."],loc:["Neón. Bajos. Éxtasis.","Oscuro. Eléctrico. Sin límites.","Tropical. Luminoso. Libre.","Místico. Salvaje. Inolvidable."],body:"Ya sea una pista vibrante, una noche futurista en Black Level, la tropical Blue Lagoon o la acogedora taberna oscura: la Chaoten Bande organiza fiestas donde los ritmos conectan, nacen amistades y la rutina queda fuera. Nuestros DJs ponen la banda sonora – vosotros hacéis legendaria la noche.",discord:["Sigue conectado con la banda","Únete a nuestro","servidor de Discord","Conoce a la Chaoten Bande, descubre próximas fiestas y lugares y forma parte de nuestra comunidad.","Unirse al servidor de Discord"],tribe:["El corazón de cada noche","La banda de","Chaoten Bande","Seis nombres, un solo latido. Juntos crean espacios llenos de libertad, respeto, música y conexión auténtica. Quien celebra con la Chaoten Bande pasa a formar parte de la historia."],roles:["Corazón & Actitud","Brillo & Emoción","Fuego & Pasión","Energía & Euforia","Encanto & Magia","Fuerza & Lealtad"],memory:["Para siempre parte de nuestro sonido","En memoria de","Algunas voces se apagan, pero su melodía permanece en nuestros corazones y en cada noche que celebramos juntos.","Inolvidable. Infinito. Siempre con nosotros."],footer:["Celebramos. Vivimos. Somos la Chaoten Bande.","Con corazón, bajos y recuerdo."],partner:{nav:"Buscar pareja",eye:"Buscar pareja",h:["BlackRaven busca","una compañera fiel"],rot:["Vivir más, juntos…","Más que un simple juego… ¿quizás nosotros?","Quizás seas tú quien escriba el próximo capítulo…"],lead:"Se trata de cercanía, honestidad, confianza y humor – de gaming, música, streaming, viajes y buenas conversaciones, también por Discord. Se busca una pareja fiel y sincera para una relación duradera.",ask:"Solo consultas serias a:",copy:"Copiar",copied:"Copiado ✓",poster:"Haz clic para ampliar"},close:"Cerrar imagen",large:"mostrar grande",noImage:"imagen aún no disponible"}
     };
     function applyLanguage(lang) {
       const t = translations[lang] || translations.de;
       document.documentElement.lang = lang;
-      const navLinks = document.querySelectorAll('.navlinks a'); navLinks[2].textContent=t.nav[0]; navLinks[3].textContent=t.nav[1];
+      document.querySelector('.navlinks a[href="#partnerboerse"]').textContent=t.partner.nav; document.querySelector('.navlinks a[href="#stamm"]').textContent=t.nav[0]; document.querySelector('.navlinks a[href="#memory"]').textContent=t.nav[1];
+      const partner=document.querySelector('#partnerboerse'); partner.querySelector('.eyebrow').textContent=t.partner.eye; partner.querySelector('h2').innerHTML=`${t.partner.h[0]}<br><em>${t.partner.h[1]}</em>`; partner.querySelectorAll('.rotLine').forEach((el,i)=>el.textContent=t.partner.rot[i]); partner.querySelector('.partnerLead').textContent=t.partner.lead; partner.querySelector('.partnerAsk').textContent=t.partner.ask; partner.querySelector('.partnerPoster span').textContent=t.partner.poster; window.pmLabels={copy:t.partner.copy,copied:t.partner.copied}; const pmBtn=partner.querySelector('.pmCopy'); if(!pmBtn.classList.contains('done')) pmBtn.textContent=t.partner.copy;
       document.querySelector('.hero .eyebrow').textContent=t.hero[0]; document.querySelector('.hero h1').innerHTML=`${t.hero[1]}<br><em>${t.hero[2]}</em>`; document.querySelector('.lead').textContent=t.hero[3]; document.querySelector('.cta').childNodes[0].nodeValue=t.hero[4]+' ';
       document.querySelectorAll('.statement p').forEach((el,i)=>el.textContent=t.statement[i]);
       document.querySelector('#locations .eyebrow').textContent=t.locHead[0]; document.querySelector('#locations h2').innerHTML=`${t.locHead[1]}<br>${t.locHead[2]}`;
@@ -132,6 +157,61 @@
     }
     const initialLang = new URLSearchParams(location.search).get('lang') || 'de'; applyLanguage(initialLang);
     document.querySelectorAll('[data-lang]').forEach(button=>button.addEventListener('click',()=>{const lang=button.dataset.lang; applyLanguage(lang); const url=new URL(location.href); url.searchParams.set('lang',lang); history.replaceState(null,'',url)}));
+    /* Partnerbörse: wechselnde Sprüche, getippter Befehl, Kopieren-Button */
+    (() => {
+      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const lines = document.querySelectorAll('.partnerRotator .rotLine');
+      let current = 0;
+      if (!reduceMotion && lines.length > 1) {
+        setInterval(() => {
+          lines[current].classList.remove('is-active');
+          current = (current + 1) % lines.length;
+          lines[current].classList.add('is-active');
+        }, 3600);
+      }
+      const cmd = document.querySelector('.pmCommand');
+      const typed = cmd.querySelector('.pmTyped');
+      const rest = cmd.querySelector('.pmRest');
+      const full = cmd.dataset.text;
+      const typeCommand = () => {
+        let i = 0;
+        typed.textContent = '';
+        rest.textContent = full;
+        typed.classList.add('typing');
+        const timer = setInterval(() => {
+          i += 1;
+          typed.textContent = full.slice(0, i);
+          rest.textContent = full.slice(i);
+          if (i >= full.length) { clearInterval(timer); typed.classList.remove('typing'); }
+        }, 120);
+      };
+      if (!reduceMotion && 'IntersectionObserver' in window) {
+        new IntersectionObserver((entries, observer) => {
+          if (entries[0].isIntersecting) { typeCommand(); observer.disconnect(); }
+        }, { threshold: 0.6 }).observe(cmd);
+      }
+      const copyButton = document.querySelector('.pmCopy');
+      copyButton.addEventListener('click', async () => {
+        try {
+          await navigator.clipboard.writeText(full);
+        } catch (error) {
+          const helper = document.createElement('textarea');
+          helper.value = full;
+          helper.style.position = 'fixed';
+          helper.style.opacity = '0';
+          document.body.appendChild(helper);
+          helper.select();
+          try { document.execCommand('copy'); } catch (e) { /* nichts zu tun */ }
+          helper.remove();
+        }
+        copyButton.classList.add('done');
+        copyButton.textContent = (window.pmLabels || {}).copied || 'Kopiert ✓';
+        setTimeout(() => {
+          copyButton.classList.remove('done');
+          copyButton.textContent = (window.pmLabels || {}).copy || 'Kopieren';
+        }, 2200);
+      });
+    })();
     const locationPreview = document.querySelector('.locationPreview');
     const locationPreviewImage = locationPreview.querySelector('img');
     const locationPreviewCaption = locationPreview.querySelector('figcaption span');
