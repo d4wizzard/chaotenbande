@@ -7,7 +7,7 @@ type Lang = "de" | "en" | "it" | "es";
 const members = [
   { name: "BloodyRose", role: "Feuer & Leidenschaft", image: "/bloodyrose.jpg", position: "center 25%" },
   { name: "IamXox", role: "Energie & Euphorie", image: "/iamxox.png", position: "center 18%" },
-  { name: "KimLee", role: "Charme & Magie", image: "/kimlee-darkside.png?v=20260801", position: "center 22%" },
+  { name: "_KimLee_", role: "Charme & Magie", image: "/kimlee-darkside.png?v=20260801", position: "center 22%" },
   { name: "🐾⇺≾⊋VØⱠ₭ɆⱤ⊊≿⇻🐾", role: "Stärke & Loyalität", image: "/volker.png", position: "center 18%" },
   { name: "_BlackRaven_", role: "Black · Love · Music", image: "/blackraven.png?v=20261006", position: "center 35%" },
 ];
