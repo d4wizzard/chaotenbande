@@ -235,6 +235,8 @@ h1 em, h2 em { color: var(--pink-soft); font-weight: 400; }
 }
 .member h3 { font-size: 1.1rem; margin: 0 0 8px; overflow-wrap: anywhere; }
 .member p { margin: 0; color: #8e808d; font-size: .78rem; letter-spacing: .08em; text-transform: uppercase; }
+.memberPmButton { margin: 18px auto 0; padding: 10px 16px; border: 1px solid rgba(255,45,171,.55); border-radius: 999px; background: rgba(255,45,171,.08); color: #f8d9ee; font: inherit; font-size: .78rem; letter-spacing: .04em; cursor: pointer; transition: .2s ease; overflow-wrap: anywhere; }
+.memberPmButton:hover, .memberPmButton:focus-visible, .memberPmButton.done { background: var(--pink); color: #fff; box-shadow: 0 0 24px rgba(255,45,171,.32); }
 .tribeCopy { color: var(--muted); line-height: 1.9; text-align: center; max-width: 760px; margin: auto; }
 
 .discordSection {
